@@ -1,0 +1,11 @@
+{"interface": "DenseNetInterface",
+    "dense_blocks": [6, 12, 24, 16], 
+    "growth_rate":32,
+    "compression_factor":0.5,
+    "n_classes":2,
+    "dropout_rate":0.2,        
+     "optimizer": {"recipe_name":"Adam", "parameters": {"learning_rate":0.001}},
+    "loss_function": {"recipe_name":"BinaryCrossentropy", "parameters":{}},  
+    "metrics": [{"recipe_name": "BinaryAccuracy", "parameters": {}},
+                {"recipe_name": "Precision", "parameters": {"class_id":1}},
+                {"recipe_name": "Recall", "parameters": {"class_id":1}}]}
